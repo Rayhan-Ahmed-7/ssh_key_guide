@@ -98,6 +98,19 @@ This guide provides step-by-step instructions for generating an SSH key, adding 
    Start-Service ssh-agent
    ```
 
+   If it doesn’t work, try setting it to start automatically:
+
+   ```powershell
+   Set-Service -Name ssh-agent -StartupType Automatic
+   Start-Service -Name ssh-agent
+   ```
+
+   To check if the SSH agent is running, you can use:
+
+   ```powershell
+   Get-Service -Name ssh-agent
+   ```
+
 2. Add the SSH key to the agent:
 
    ```powershell
