@@ -28,6 +28,12 @@ This document provides step-by-step instructions for generating an SSH key, addi
 
    Replace `"your_email@example.com"` with the email address associated with your GitHub account.
 
+   **Note:** If you are using a legacy system that doesn't support the `Ed25519` algorithm, use:
+
+   ```bash
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
+
 3. When prompted to enter a file in which to save the key, press **Enter** to accept the default location.
 4. When prompted to create a passphrase, you can press **Enter** if you don’t want to set a passphrase. Otherwise, type a secure passphrase.
 
